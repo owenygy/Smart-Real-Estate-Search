@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AgencyActivity">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="84dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/highlights"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/inputGarage"
+        app:layout_constraintTop_toBottomOf="@+id/Location" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="66dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/garage"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bedroom" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/publish_history"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/history_listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="#BCF6F5F3"
+        android:choiceMode="multipleChoice"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputGarage" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/delete__button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/history_listview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ID"
+        android:layout_width="26dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/id"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/Rent"
+        android:layout_width="45dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/rent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/inputID"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/Bedroom"
+        android:layout_width="74dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/bedroom"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID" />
+
+    <TextView
+        android:id="@+id/Location"
+        android:layout_width="73dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/location"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/inputBedroom"
+        app:layout_constraintTop_toBottomOf="@+id/Rent" />
+
+    <EditText
+        android:id="@+id/inputID"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/id"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/ID"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/inputBedroom"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/bedroom"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/Bedroom"
+        app:layout_constraintTop_toBottomOf="@+id/inputID" />
+
+    <EditText
+        android:id="@+id/inputGarage"
+        android:layout_width="88dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/garage"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/inputBedroom" />
+
+    <EditText
+        android:id="@+id/inputRent"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="72dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/rent"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toEndOf="@+id/Rent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputLocation"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/location"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputHighlights"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toEndOf="@+id/Location"
+        app:layout_constraintTop_toBottomOf="@+id/inputRent" />
+
+    <EditText
+        android:id="@+id/inputHighlights"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/highlights"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/history_listview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
